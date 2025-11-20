@@ -134,4 +134,3 @@ console.log("Hello"); //with never TypeScript নিশ্চিত function ক
 // তাই interpreter নিচের লাইনে নামতে পারছে না
 // তাই "Hello" কখনো output হবে না
 //=======================================================================================================
-//# sourceMappingURL=BasicType.js.map

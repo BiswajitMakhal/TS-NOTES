@@ -1,44 +1,52 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-    // File Layout
-    // "rootDir": "./src",
-    // "outDir": "./dist",
 
-    // Environment Settings
-    // See also https://aka.ms/tsconfig/module
     "module": "nodenext",
+    // Node.js style module system (import/export Node অনুযায়ী কাজ করবে)
+
     "target": "esnext",
+    // Compile করার পর জাভাস্ক্রিপ্ট latest version (ESNext) হবে
+
     "types": [],
-    // For nodejs:
-    // "lib": ["esnext"],
-    // "types": ["node"],
-    // and npm install -D @types/node
+    // কোন type declaration automatically load করা হবে (empty মানে কিছুই লোড হবে না)
 
-    // Other Outputs
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
+    // ❌ Extra Garbage Files OFF
+    "sourceMap": false,
+    // .map debug files তৈরি করবে না
 
-    // Stricter Typechecking Options
+    "declaration": false,
+    // .d.ts type definition ফাইল তৈরি হবে না
+
+    "declarationMap": false,
+    // .d.ts.map file তৈরি হবে না
+
+    // ✔️ Strict Type Safety
     "noUncheckedIndexedAccess": true,
+    // array[index] করলে value undefined হতে পারে — TS warning দেবে (extra safety)
+
     "exactOptionalPropertyTypes": true,
+    // Optional properties একদম exact টাইপ follow করবে (undefined auto allow করবে না)
 
-    // Style Options
-    // "noImplicitReturns": true,
-    // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noPropertyAccessFromIndexSignature": true,
-
-    // Recommended Options
     "strict": true,
+    // সব রকম strict type checking on — সবচেয়ে নিরাপদ TS configuration
+
+    // ✔️ React + Module Options
     "jsx": "react-jsx",
+    // React 17+ JSX transform enable (no need to import React)
+
     "verbatimModuleSyntax": true,
+    // Import/export syntax 그대로 রাখবে (TypeScript rewrite করবে না)
+
     "isolatedModules": true,
+    // প্রতিটি ফাইল আলাদা module হিসেবে treat হবে (Next.js, React, bundlers-এর জন্য perfect)
+
     "noUncheckedSideEffectImports": true,
+    // Import করলে যদি কিছু side effect থাকে, TS warning দেবে (clean import)
+
     "moduleDetection": "force",
-    "skipLibCheck": true,
+    // সব ফাইলকে force করে module হিসেবে ধরবে
+
+    "skipLibCheck": true
+    // node_modules-এর type file (.d.ts) গুলো check করবে না (build faster)
   }
 }
