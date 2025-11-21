@@ -1,3 +1,6 @@
+//   Inference 
+//   Annotation
+
 //-----------Inference:
 // TypeScript নিজে থেকেই কোনো ভ্যালু দেখে তার টাইপ আন্দাজ করে নেয় — এটাকেই বলে Type Inference।
 // মানে তুমি টাইপ লিখে না দিলেও, TypeScript নিজে বুঝে ফেলে ভ্যারিয়েবলের টাইপ কী হবে।
@@ -39,5 +42,3 @@ let user: { name: string; age: number } = {
     name: "Biswajit",
     age: 20
 };
-
-//59:28

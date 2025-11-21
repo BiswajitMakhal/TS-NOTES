@@ -1,8 +1,10 @@
 "use strict";
+//   Inference 
+//   Annotation
+Object.defineProperty(exports, "__esModule", { value: true });
 //-----------Inference:
 // TypeScript নিজে থেকেই কোনো ভ্যালু দেখে তার টাইপ আন্দাজ করে নেয় — এটাকেই বলে Type Inference।
 // মানে তুমি টাইপ লিখে না দিলেও, TypeScript নিজে বুঝে ফেলে ভ্যারিয়েবলের টাইপ কী হবে।
-Object.defineProperty(exports, "__esModule", { value: true });
 let x = 10;
 // এখানে তুমি টাইপ লেখোনি, কিন্তু TypeScript বুঝে নেবে:
 // x একটি number
@@ -33,4 +35,3 @@ let user = {
     name: "Biswajit",
     age: 20
 };
-//59:28
