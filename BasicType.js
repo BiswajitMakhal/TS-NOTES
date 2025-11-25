@@ -1,17 +1,9 @@
 "use strict";
-//Variable Declaration,
-//  Arrays,
-//  Tuple,
-//  Union,
-//  Object,
-//  Function,
-//  Annotations,
-//  Type alias,
-//  interface,abstract class, abstract method,
-//  extend
-//  generics
-//  modules
-//  Array of Objects etc
+//Tuple
+//Any
+//Unknown
+//Void
+//Null,Undefined,Never
 Object.defineProperty(exports, "__esModule", { value: true });
 //----------Tuple:
 // Tuple হলো TypeScript-এর এমন এক data type যেখানে array-এর মতো দেখায়, কিন্তু position অনুযায়ী আলাদা আলাদা type store করা যায়।

@@ -1,3 +1,51 @@
+//Inference
+//Annotation
+//Interface,Extend
+//Type Aliases
+//Intersection Type
+
+
+//-----------Inference:
+// TypeScript নিজে থেকেই কোনো ভ্যালু দেখে তার টাইপ আন্দাজ করে নেয় — এটাকেই বলে Type Inference।
+// মানে তুমি টাইপ লিখে না দিলেও, TypeScript নিজে বুঝে ফেলে ভ্যারিয়েবলের টাইপ কী হবে।
+
+let a = 10;
+// এখানে তুমি টাইপ লেখোনি, কিন্তু TypeScript বুঝে নেবে:
+// a একটি number
+// তাই পরে তুমি a = "Biswajit" দিলে error দেবে
+
+//---------Annotation:
+// Type Annotation হলো তুমি নিজে হাতে কোনো ভ্যারিয়েবল, ফাংশন, প্যারামিটার, রিটার্ন ভ্যালু ইত্যাদির টাইপ লিখে দেওয়া।
+// TypeScript যেটা আন্দাজ করে (type inference), সেখানে তুমি স্পষ্টভাবে টাইপ বলে দাও — এটাকেই বলে annotation।
+
+//1.Variable Annotation:
+let anno: number | boolean | string;
+
+anno = 12;
+anno = true;
+anno = "Annotation"
+
+//2.Function Parameter Annotation:
+function sum(a: number, b: number) {
+    return a + b;
+}
+//এখানে তুমি স্পষ্ট করে দিচ্ছো a এবং b হলো number।
+
+//3.Function Return Type Annotation:
+function doSomething(): void {
+    console.log("Hello");
+}
+//এখানে তুমি বলে দিচ্ছো ফাংশন void return করবে।
+
+//4. Array Annotation:
+let numbers: number[] = [1, 2, 3];
+let names: string[] = ["A", "B"];
+
+//5. Object Annotation:
+let user: { name: string; age: number } = {
+    name: "Biswajit",
+    age: 20
+};
 
 //------------Interface:
 // TypeScript-এর interface হলো Object, Class, Function — যেগুলোর shape/structure define করার জন্য ব্যবহার করা হয়।
