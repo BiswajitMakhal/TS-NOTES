@@ -1,11 +1,12 @@
+//Class
+
 //Access modifiers(public, private, protected)
 //Readonly properties
 //Optional properties
 //Parameter properties
 //Getters or Setters
-//
+//Static members
 
-//Class
 
 // Basic Class Example(TypeScript):
 class Person {
@@ -200,3 +201,22 @@ d1.health = "So much bad for health";//update
 console.log(d1.health);
 
 
+//--------------Static members:
+// static keyword ব্যবহার করলে property/method class-এর সাথে attach হয়।
+// object বানালে static member object-এর property হয় না।
+// এগুলো সাধারণত utility/value store করার জন্য ব্যবহার করা হয়।
+
+class Student {
+    static schoolName: string = "ABC School"; // static property
+
+    static showSchool() {                     // static method
+        console.log(Student.schoolName);
+    }
+}
+
+Student.showSchool();  // ✔ OK
+console.log(Student.schoolName); // ✔ OK
+
+// const s = new Student();
+// console.log(s.schoolName);  // ❌ ERROR (not allowed)
+// s.showSchool();             // ❌ ERROR
