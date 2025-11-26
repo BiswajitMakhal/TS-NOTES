@@ -24,7 +24,7 @@
     "noUncheckedIndexedAccess": true,
     // array[index] করলে value undefined হতে পারে — TS warning দেবে (extra safety)
 
-    "exactOptionalPropertyTypes": true,
+    "exactOptionalPropertyTypes": false,
     // Optional properties একদম exact টাইপ follow করবে (undefined auto allow করবে না)
 
     "strict": true,

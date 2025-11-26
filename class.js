@@ -3,6 +3,7 @@
 //Readonly properties
 //Optional properties
 //Parameter properties
+//Getters or Setters
 //
 Object.defineProperty(exports, "__esModule", { value: true });
 //Class
@@ -127,3 +128,45 @@ class Read {
     }
 }
 let book1 = new Read("The Power of Your Subconscious Mind");
+// ------------------Optional properties:
+class Course {
+    title;
+    duration; // optional
+    constructor(title, duration) {
+        this.title = title;
+        this.duration = duration;
+    }
+}
+const c1 = new Course("JavaScript");
+const c2 = new Course("TypeScript", 40);
+// --------------Parameter Properties:
+//mane constructor-er moddhe direct variable amra diye di aar tar sathe value tao pass kore di with (public, private, protected, readonly)
+class Para {
+    name;
+    age;
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+//------------Getters or Setters:
+// get :Getter হলো এমন method যেটা class property read করানোর জন্য ব্যবহার হয়।
+// Getter call করার সময় আমরা method-এর নামকে property-এর মতো ব্যবহার করতে পারি।
+// set:Setter হলো এমন method যেটা class property change/update করানোর জন্য ব্যবহার হয়,
+// এবং সেখানে তুমি validation করতে পারো।
+class Drugs {
+    _health;
+    constructor(_health) {
+        this._health = _health;
+    }
+    get health() {
+        return this._health; //underscore ta ai karone deoa hoi pore giye jate same name er method likhte pari , otherwise different name likhte hobe
+    }
+    set health(value) {
+        this._health = value;
+    }
+}
+let d1 = new Drugs("Bad");
+d1.health; //Bad
+d1.health = "So much bad for health"; //update
+console.log(d1.health);
