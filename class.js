@@ -7,6 +7,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 //Parameter properties
 //Getters or Setters
 //Static members
+//Abstract class or Abstract method
 // Basic Class Example(TypeScript):
 class Person {
     name;
@@ -185,3 +186,19 @@ console.log(Student.schoolName); // ✔ OK
 // const s = new Student();
 // console.log(s.schoolName);  // ❌ ERROR (not allowed)
 // s.showSchool();             // ❌ ERROR
+// --------------Abstract class and Abstract method:
+//Abstract class: Abstract class হলো এমন class যেটাকে সরাসরি object বানানো যায় না।
+//  এটা শুধু child class-এর জন্য structure/blueprint তৈরি করে।
+//Abstract method:যে method-এর কোনো body (implementation) নেই।
+//  শুধুমাত্র ঘোষণা করা হয়, কিন্তু কাজ করে না।
+//  Child class বাধ্যতামূলকভাবে এটাকে implement করবে।
+class Payment {
+}
+class Paytm extends Payment {
+    pay(amount) {
+        console.log(`Paid ₹${amount} using Paytm`);
+    }
+}
+//const pay1 = new Payment(); ❌ You cannot do this (error)
+const p = new Paytm();
+p.pay(500); // Paid ₹500 using Paytm

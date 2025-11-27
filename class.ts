@@ -6,6 +6,7 @@
 //Parameter properties
 //Getters or Setters
 //Static members
+//Abstract class or Abstract method
 
 
 // Basic Class Example(TypeScript):
@@ -220,3 +221,28 @@ console.log(Student.schoolName); // ✔ OK
 // const s = new Student();
 // console.log(s.schoolName);  // ❌ ERROR (not allowed)
 // s.showSchool();             // ❌ ERROR
+
+
+// --------------Abstract class and Abstract method:
+
+//Abstract class: Abstract class হলো এমন class যেটাকে সরাসরি object বানানো যায় না।
+//  এটা শুধু child class-এর জন্য structure/blueprint তৈরি করে।
+
+//Abstract method:যে method-এর কোনো body (implementation) নেই।
+//  শুধুমাত্র ঘোষণা করা হয়, কিন্তু কাজ করে না।
+//  Child class বাধ্যতামূলকভাবে এটাকে implement করবে।
+
+abstract class Payment {
+    abstract pay(amount: number): void; // abstract method, sudhu declare kora hoi aar child class-a use kora hoi
+}
+
+class Paytm extends Payment {
+    pay(amount: number): void {
+        console.log(`Paid ₹${amount} using Paytm`);
+    }
+}
+
+//const pay1 = new Payment(); ❌ You cannot do this (error)
+const p = new Paytm();
+p.pay(500); // Paid ₹500 using Paytm
+
